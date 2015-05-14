@@ -50,12 +50,18 @@
             Media *media = [[Media alloc] init];
             media.user = [self randomUser];
             media.image = image;
+            media.caption = [self randomSentence];
             
-            NSUInteger commentCount = arc4random_uniform(10);
+            NSUInteger commentCount = arc4random_uniform(10) + 2;
             NSMutableArray *randomComments = [NSMutableArray array];
             
             for (int i  = 0; i <= commentCount; i++) {
                 Comment *randomComment = [self randomComment];
+                
+                if (i == 0){
+                    randomComment.topComment = TRUE;
+                }
+                
                 [randomComments addObject:randomComment];
             }
             
@@ -71,10 +77,10 @@
 - (User *) randomUser {
     User *user = [[User alloc] init];
     
-    user.userName = [self randomStringOfLength:arc4random_uniform(10)];
+    user.userName = [self randomStringOfLength:arc4random_uniform(10) + 2];
     
-    NSString *firstName = [self randomStringOfLength:arc4random_uniform(7)];
-    NSString *lastName = [self randomStringOfLength:arc4random_uniform(12)];
+    NSString *firstName = [self randomStringOfLength:arc4random_uniform(7) + 2];
+    NSString *lastName = [self randomStringOfLength:arc4random_uniform(12) + 2];
     user.fullName = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
     
     return user;
@@ -85,18 +91,31 @@
     
     comment.from = [self randomUser];
     
-    NSUInteger wordCount = arc4random_uniform(20);
+    NSUInteger wordCount = arc4random_uniform(20) + 2;
     
     NSMutableString *randomSentence = [[NSMutableString alloc] init];
     
     for (int i  = 0; i <= wordCount; i++) {
-        NSString *randomWord = [self randomStringOfLength:arc4random_uniform(12)];
+        NSString *randomWord = [self randomStringOfLength:arc4random_uniform(12) + 2];
         [randomSentence appendFormat:@"%@ ", randomWord];
     }
     
     comment.text = randomSentence;
     
     return comment;
+}
+
+- (NSString *) randomSentence {
+    NSUInteger wordCount = arc4random_uniform(20) + 2;
+    
+    NSMutableString *randomSentence = [[NSMutableString alloc] init];
+
+    for (int i  = 0; i <= wordCount; i++) {
+        NSString *randomWord = [self randomStringOfLength:arc4random_uniform(12) + 2];
+        [randomSentence appendFormat:@"%@ ", randomWord];
+    }
+
+    return randomSentence;
 }
 
 - (NSString *) randomStringOfLength:(NSUInteger) len {

@@ -15,7 +15,7 @@
 @interface Media : NSObject
 
 @property (nonatomic, strong) NSString *idNumber;
-@property (nonatomic, strong) NSString *user;
+@property (nonatomic, strong) User *user;
 @property (nonatomic, strong) NSURL *mediaURL;
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, strong) NSString *caption;

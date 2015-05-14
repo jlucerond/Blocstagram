@@ -23,6 +23,10 @@
 		D83F29C31B05067D001A6A84 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D83F29B91B05067D001A6A84 /* 8.jpg */; };
 		D83F29C41B05067D001A6A84 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D83F29BA1B05067D001A6A84 /* 9.jpg */; };
 		D83F29C51B05067D001A6A84 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D83F29BB1B05067D001A6A84 /* 10.jpg */; };
+		D83F29C81B050F65001A6A84 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F29C71B050F65001A6A84 /* User.m */; };
+		D83F29CB1B05101B001A6A84 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F29CA1B05101B001A6A84 /* Media.m */; };
+		D83F29CE1B051146001A6A84 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F29CD1B051146001A6A84 /* Comment.m */; };
+		D83F29D11B051388001A6A84 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F29D01B051388001A6A84 /* DataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,14 @@
 		D83F29B91B05067D001A6A84 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
 		D83F29BA1B05067D001A6A84 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
 		D83F29BB1B05067D001A6A84 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
+		D83F29C61B050F65001A6A84 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		D83F29C71B050F65001A6A84 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		D83F29C91B05101B001A6A84 /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
+		D83F29CA1B05101B001A6A84 /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
+		D83F29CC1B051146001A6A84 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		D83F29CD1B051146001A6A84 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		D83F29CF1B051388001A6A84 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
+		D83F29D01B051388001A6A84 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +115,14 @@
 				D83F298D1B04DF6B001A6A84 /* AppDelegate.m */,
 				D83F29AE1B04DF9B001A6A84 /* ImagesTableViewController.h */,
 				D83F29AF1B04DF9B001A6A84 /* ImagesTableViewController.m */,
+				D83F29C61B050F65001A6A84 /* User.h */,
+				D83F29C71B050F65001A6A84 /* User.m */,
+				D83F29C91B05101B001A6A84 /* Media.h */,
+				D83F29CA1B05101B001A6A84 /* Media.m */,
+				D83F29CC1B051146001A6A84 /* Comment.h */,
+				D83F29CD1B051146001A6A84 /* Comment.m */,
+				D83F29CF1B051388001A6A84 /* DataSource.h */,
+				D83F29D01B051388001A6A84 /* DataSource.m */,
 				D83F29951B04DF6B001A6A84 /* Images.xcassets */,
 				D83F29971B04DF6B001A6A84 /* LaunchScreen.xib */,
 				D83F29B11B05066F001A6A84 /* images */,
@@ -264,6 +284,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D83F29D11B051388001A6A84 /* DataSource.m in Sources */,
+				D83F29C81B050F65001A6A84 /* User.m in Sources */,
+				D83F29CE1B051146001A6A84 /* Comment.m in Sources */,
+				D83F29CB1B05101B001A6A84 /* Media.m in Sources */,
 				D83F298E1B04DF6B001A6A84 /* AppDelegate.m in Sources */,
 				D83F298B1B04DF6B001A6A84 /* main.m in Sources */,
 				D83F29B01B04DF9B001A6A84 /* ImagesTableViewController.m in Sources */,

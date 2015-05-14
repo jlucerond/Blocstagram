@@ -76,6 +76,27 @@
     return cell;
 }
 
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UIImage *image = self.images[indexPath.row];
+    return (CGRectGetWidth(self.view.frame)/image.size.width) * image.size.height;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        [self.images removeObjectAtIndex:indexPath.row];
+        // Delete the row from the data source
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    } 
+}
+
+#pragma mark - question for mark- the curriculum mentions this function, but it seems as though the default is true. Is it smart to keep this, delete it, or uncomment it?
+//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return true;
+//}
+
+
 
 /*
 // Override to support conditional editing of the table view.

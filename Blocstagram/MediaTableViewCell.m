@@ -21,6 +21,8 @@
 @property (nonatomic, strong) NSLayoutConstraint *usernameAndCaptionLabelHeightConstraint;
 @property (nonatomic, strong) NSLayoutConstraint *commentLabelHeightConstraint;
 
+@property BOOL isEvenNumberedComment;
+
 @end
 
 static UIFont *lightFont;
@@ -39,7 +41,7 @@ static NSParagraphStyle *paragraphStyle;
     usernameLabelGray = [UIColor colorWithRed:0.933 green:0.933 blue:0.933 alpha:1]; /*#eeeeee*/
     commentLabelGray = [UIColor colorWithRed:0.898 green:0.898 blue:0.898 alpha:1]; /*#e5e5e5*/
     linkColor = [UIColor colorWithRed:0.345 green:0.314 blue:0.427 alpha:1]; /*#58506d*/
-    topCommentColor = [UIColor orangeColor]; /*orange*/
+    topCommentColor = [UIColor redColor]; /*red*/
     
     NSMutableParagraphStyle *mutableParagraphStyle = [[NSMutableParagraphStyle alloc] init];
     mutableParagraphStyle.headIndent = 20.0;
@@ -65,7 +67,8 @@ static NSParagraphStyle *paragraphStyle;
         self.commentLabel.backgroundColor = commentLabelGray;
         
 #pragma mark - MARK - why doens't this work here?
-        self.commentLabel.textAlignment = NSTextAlignmentRight;
+// solution is to move this to setMediaItem
+//        self.commentLabel.textAlignment = NSTextAlignmentRight;
         
         
         for (UIView *view in @[self.mediaImageView, self.usernameAndCaptionLabel, self.commentLabel]){
@@ -131,6 +134,10 @@ static NSParagraphStyle *paragraphStyle;
     self.mediaImageView.image = _mediaItem.image;
     self.usernameAndCaptionLabel.attributedText = [self usernameAndCaptionString];
     self.commentLabel.attributedText = [self commentString];
+    
+    if (self.isEvenNumberedComment){
+    self.commentLabel.textAlignment = NSTextAlignmentRight;
+    }
 }
 
 - (NSAttributedString *) usernameAndCaptionString {
@@ -164,6 +171,13 @@ static NSParagraphStyle *paragraphStyle;
         if (comment.topComment){
             NSRange commentRange = NSMakeRange(0, oneCommentString.length);
             [oneCommentString addAttribute:NSForegroundColorAttributeName value:topCommentColor range:commentRange];
+        }
+        
+        if (comment.evenNumberedComment){
+            self.isEvenNumberedComment = TRUE;
+        }
+        else{
+            self.isEvenNumberedComment = false;
         }
         
         NSRange usernameRange = [baseString rangeOfString:comment.from.userName];

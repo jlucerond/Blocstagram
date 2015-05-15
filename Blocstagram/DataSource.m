@@ -11,40 +11,14 @@
 #import "Media.h"
 #import "Comment.h"
 
-@interface DataSource(){
-    NSMutableArray *_mediaItems;
-}
+@interface DataSource()
 
 @property (nonatomic, strong) NSArray *mediaItems;
 
 @end
 
-#pragma mark - let's chat about Singelton Pattern/shared instance. Also, KVC compliant
+#pragma mark - let's chat about Singelton Pattern/shared instance. Or at least I need to come back to this.
 @implementation DataSource
-
-- (NSUInteger) countOfMediaItems {
-    return self.mediaItems.count;
-}
-
-- (id) objectInMediaItemsAtIndex:(NSUInteger)index{
-    return [self.mediaItems objectAtIndex:index];
-}
-
-- (NSArray *) mediaItemsAtIndexes:(NSIndexSet *)indexes {
-    return [self.mediaItems objectsAtIndexes:indexes];
-}
-
-- (void) insertObject:(Media *)object inMediaItemsAtIndex:(NSUInteger)index {
-    [_mediaItems insertObject:object atIndex:index];
-}
-
-- (void) removeObjectFromMediaItemsAtIndex:(NSUInteger)index{
-    [_mediaItems removeObjectAtIndex:index];
-}
-
-- (void) replaceObjectInMediaItemsAtIndex:(NSUInteger)index withObject:(id)object{
-    [_mediaItems replaceObjectAtIndex:index withObject:object];
-}
 
 + (instancetype) sharedInstance {
     static dispatch_once_t once;
@@ -55,10 +29,6 @@
     return sharedInstance;
 }
 
-- (void) deleteMediaItem:(Media *)item{
-    NSMutableArray *mutableArrayWithKVO = [self mutableArrayValueForKey:@"mediaItems"];
-    [mutableArrayWithKVO removeObject:item];
-}
 - (instancetype) init {
     self = [super init];
     
@@ -90,10 +60,6 @@
                 
                 if (i == 0){
                     randomComment.topComment = TRUE;
-                }
-                
-                if (i%2 == 0){
-                    randomComment.evenNumberedComment = TRUE;
                 }
                 
                 [randomComments addObject:randomComment];

@@ -26,7 +26,8 @@
     self = [super initWithStyle:style];
     if (self) {
         //custom init
-        [self convertToMutableArray];
+//        [self convertToMutableArray];
+        
     }
     return self;
 }

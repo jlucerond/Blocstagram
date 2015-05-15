@@ -39,7 +39,7 @@ static NSParagraphStyle *paragraphStyle;
     usernameLabelGray = [UIColor colorWithRed:0.933 green:0.933 blue:0.933 alpha:1]; /*#eeeeee*/
     commentLabelGray = [UIColor colorWithRed:0.898 green:0.898 blue:0.898 alpha:1]; /*#e5e5e5*/
     linkColor = [UIColor colorWithRed:0.345 green:0.314 blue:0.427 alpha:1]; /*#58506d*/
-    topCommentColor = [UIColor orangeColor]; /*#FF8C00*/
+    topCommentColor = [UIColor orangeColor]; /*orange*/
     
     NSMutableParagraphStyle *mutableParagraphStyle = [[NSMutableParagraphStyle alloc] init];
     mutableParagraphStyle.headIndent = 20.0;

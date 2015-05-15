@@ -15,6 +15,6 @@
 @property (nonatomic, strong) NSString *idNumber;
 @property (nonatomic, strong) User *from;
 @property (nonatomic, strong) NSString *text;
-@property (assign) bool *topComment;
+@property (assign) BOOL *topComment;
 
 @end

@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>AA6B5C8D-A1EB-421A-BA64-AB9E6D4F6AB8</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Blocstagram</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>FDC617AE2CDF3CDB06D996FE5B17BBB0133710ED</key>
 		<string>https://github.com/jlucerond/Blocstagram.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Blocstagram.xcodeproj/project.xcworkspace</string>
+	<string>Blocstagram.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>FDC617AE2CDF3CDB06D996FE5B17BBB0133710ED</key>

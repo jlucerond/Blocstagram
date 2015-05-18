@@ -164,4 +164,12 @@
     return [NSString stringWithString:s];
 }
 
+# pragma mark - testing out how to move item to top of queue
+
+- (void) alterMediaItem:(Media *)item {
+    NSMutableArray *mutableArrayWithKVO = [self mutableArrayValueForKey:@"mediaItems"];
+    [mutableArrayWithKVO removeObject:item];
+    [mutableArrayWithKVO insertObject:item atIndex:0];
+}
+
 @end

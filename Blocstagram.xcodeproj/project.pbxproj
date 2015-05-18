@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D81314741B0A2B45008BF291 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81314731B0A2B45008BF291 /* LoginViewController.m */; };
 		D83F298B1B04DF6B001A6A84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F298A1B04DF6B001A6A84 /* main.m */; };
 		D83F298E1B04DF6B001A6A84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F298D1B04DF6B001A6A84 /* AppDelegate.m */; };
 		D83F29961B04DF6B001A6A84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D83F29951B04DF6B001A6A84 /* Images.xcassets */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D81314721B0A2B45008BF291 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		D81314731B0A2B45008BF291 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		D83F29851B04DF6B001A6A84 /* Blocstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D83F29891B04DF6B001A6A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D83F298A1B04DF6B001A6A84 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 			children = (
 				D83F298C1B04DF6B001A6A84 /* AppDelegate.h */,
 				D83F298D1B04DF6B001A6A84 /* AppDelegate.m */,
+				D81314721B0A2B45008BF291 /* LoginViewController.h */,
+				D81314731B0A2B45008BF291 /* LoginViewController.m */,
 				D83F29AE1B04DF9B001A6A84 /* ImagesTableViewController.h */,
 				D83F29AF1B04DF9B001A6A84 /* ImagesTableViewController.m */,
 				D83F29D21B053389001A6A84 /* MediaTableViewCell.h */,
@@ -294,6 +299,7 @@
 				D83F29D41B05338A001A6A84 /* MediaTableViewCell.m in Sources */,
 				D83F29CE1B051146001A6A84 /* Comment.m in Sources */,
 				D83F29CB1B05101B001A6A84 /* Media.m in Sources */,
+				D81314741B0A2B45008BF291 /* LoginViewController.m in Sources */,
 				D83F298E1B04DF6B001A6A84 /* AppDelegate.m in Sources */,
 				D83F298B1B04DF6B001A6A84 /* main.m in Sources */,
 				D83F29B01B04DF9B001A6A84 /* ImagesTableViewController.m in Sources */,
@@ -485,6 +491,7 @@
 				D83F29AA1B04DF6B001A6A84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D83F29AB1B04DF6B001A6A84 /* Build configuration list for PBXNativeTarget "BlocstagramTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +500,7 @@
 				D83F29AD1B04DF6B001A6A84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

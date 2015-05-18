@@ -26,7 +26,7 @@
     self = [super initWithStyle:style];
     if (self) {
         //custom init
-//        [self convertToMutableArray];
+
     }
     return self;
 }
@@ -47,12 +47,6 @@
     [[DataSource sharedInstance] removeObserver:self forKeyPath:@"mediaItems"];
 }
 
-- (void) refreshControlDidFire: (UIRefreshControl *) sender{
-    [[DataSource sharedInstance] requestNewItemsWithCompletionHandler:^(NSError *error) {
-        [sender endRefreshing];
-    }];
-}
-
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if (object == [DataSource sharedInstance] && [keyPath isEqualToString:@"mediaItems"]) {
         // We know mediaItems changed.  Let's see what kind of change it is.
@@ -64,8 +58,8 @@
         }
         
         else if (kindOfChange == NSKeyValueChangeInsertion ||
-                   kindOfChange == NSKeyValueChangeRemoval ||
-                   kindOfChange == NSKeyValueChangeReplacement) {
+                 kindOfChange == NSKeyValueChangeRemoval ||
+                 kindOfChange == NSKeyValueChangeReplacement) {
             // We have an incremental change: inserted, deleted, or replaced images
             
             // Get a list of the index (or indices) that changed
@@ -97,6 +91,12 @@
             [self.tableView endUpdates];
         }
     }
+}
+
+- (void) refreshControlDidFire: (UIRefreshControl *) sender{
+    [[DataSource sharedInstance] requestNewItemsWithCompletionHandler:^(NSError *error) {
+        [sender endRefreshing];
+    }];
 }
 
 - (void) infiniteScrollIfNecessary{

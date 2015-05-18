@@ -10,9 +10,7 @@
 
 @class Media;
 
-@interface DataSource : NSObject{
-    NSMutableArray *_mediaItems;
-}
+@interface DataSource : NSObject 
 
 +(instancetype) sharedInstance;
 

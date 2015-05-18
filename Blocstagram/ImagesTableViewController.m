@@ -15,7 +15,7 @@
 
 @interface ImagesTableViewController ()
 
-@property (nonatomic, strong)  NSMutableArray *items;
+//@property (nonatomic, strong)  NSMutableArray *items;
 
 @end
 
@@ -26,7 +26,7 @@
     self = [super initWithStyle:style];
     if (self) {
         //custom init
-        [self convertToMutableArray];
+//        [self convertToMutableArray];
     }
     return self;
 }
@@ -44,14 +44,14 @@
     [[DataSource sharedInstance] removeObserver:self forKeyPath:@"mediaItems"];
 }
 
-- (void) convertToMutableArray{
-    self.items = [[DataSource sharedInstance].mediaItems mutableCopy];
-}
+//- (void) convertToMutableArray{
+//    self.items = [[DataSource sharedInstance].mediaItems mutableCopy];
+//}
 
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if (object == [DataSource sharedInstance] && [keyPath isEqualToString:@"mediaItems"]) {
         // We know mediaItems changed.  Let's see what kind of change it is.
-        int kindOfChange = [change[NSKeyValueChangeKindKey] intValue];
+        NSKeyValueChange kindOfChange = [change[NSKeyValueChangeKindKey] unsignedIntegerValue];
         
         if (kindOfChange == NSKeyValueChangeSetting) {
             // Someone set a brand new images array
@@ -79,11 +79,14 @@
             // Tell the table view what the changes are
             if (kindOfChange == NSKeyValueChangeInsertion) {
                 [self.tableView insertRowsAtIndexPaths:indexPathsThatChanged withRowAnimation:UITableViewRowAnimationAutomatic];
-            } else if (kindOfChange == NSKeyValueChangeRemoval) {
+            }
+            else if (kindOfChange == NSKeyValueChangeRemoval) {
                 [self.tableView deleteRowsAtIndexPaths:indexPathsThatChanged withRowAnimation:UITableViewRowAnimationAutomatic];
-            } else if (kindOfChange == NSKeyValueChangeReplacement) {
+            }
+            else if (kindOfChange == NSKeyValueChangeReplacement) {
                 [self.tableView reloadRowsAtIndexPaths:indexPathsThatChanged withRowAnimation:UITableViewRowAnimationAutomatic];
             }
+            
             
             // Tell the table view that we're done telling it about changes, and to complete the animation
             [self.tableView endUpdates];
@@ -101,13 +104,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     // Configure the cell...
     MediaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mediaCell" forIndexPath:indexPath];
-    cell.mediaItem = self.items[indexPath.row];
+    cell.mediaItem = [DataSource sharedInstance].mediaItems[indexPath.row];
     
     return cell;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    Media *item = self.items[indexPath.row];
+    Media *item = [DataSource sharedInstance].mediaItems[indexPath.row];
     return [MediaTableViewCell heightForMediaItem:item width:CGRectGetWidth(self.view.frame)];
 }
 

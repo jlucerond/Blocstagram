@@ -36,7 +36,7 @@
 }
 
 + (NSString *) instagramClientID {
-    return @"<#b6252ae8899f46729a82ecab577ab72e#>";
+    return @"b6252ae8899f46729a82ecab577ab72e";
 }
 
 - (instancetype) init {

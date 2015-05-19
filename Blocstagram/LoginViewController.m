@@ -84,7 +84,7 @@ NSString *const LoginViewControllerDidGetAccessTokenNotification = @"LoginViewCo
 }
 
 - (NSString *) redirectURI {
-    return @"<#http://www.iosdevelopr.com#>";
+    return @"http://www.iosdevelopr.com";
 }
 
 /*

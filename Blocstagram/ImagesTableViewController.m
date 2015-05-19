@@ -12,10 +12,12 @@
 #import "User.h"
 #import "Comment.h"
 #import "MediaTableViewCell.h"
+#import "LoginViewController.h"
 
 @interface ImagesTableViewController ()
 
 //@property (nonatomic, strong)  NSMutableArray *items;
+@property (strong, nonatomic) UIWindow *window;
 
 @end
 
@@ -40,6 +42,34 @@
     [self.refreshControl addTarget:self action:@selector(refreshControlDidFire:) forControlEvents:UIControlEventValueChanged];
 
     [self.tableView registerClass:[MediaTableViewCell class] forCellReuseIdentifier:@"mediaCell"];
+}
+
+- (void) viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:YES];
+    
+//    [self.navigationController setNavigationBarHidden:NO];
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithTitle:@"HOME" style:UIBarButtonItemStylePlain target:self action:@selector(startOverAgain)];
+    self.navigationItem.rightBarButtonItem = homeButton;
+    self.navigationItem.title = @"title works";
+}
+
+- (void) startOverAgain{
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    [DataSource sharedInstance]; // create the data source (so it can receive the access token notification)
+    
+    UINavigationController *navVC = [[UINavigationController alloc] init];
+    LoginViewController *loginVC = [[LoginViewController alloc] init];
+    [navVC setViewControllers:@[loginVC] animated:YES];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:LoginViewControllerDidGetAccessTokenNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+        ImagesTableViewController *imagesVC = [[ImagesTableViewController alloc] init];
+        [navVC setViewControllers:@[imagesVC] animated:YES];
+    }];
+    
+    self.window.rootViewController = navVC;
+    
+    [self.window makeKeyAndVisible];
 }
 
 - (void) dealloc

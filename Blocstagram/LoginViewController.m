@@ -40,6 +40,24 @@ NSString *const LoginViewControllerDidGetAccessTokenNotification = @"LoginViewCo
     }
 }
 
+- (void) viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:YES];
+    
+    //    [self.navigationController setNavigationBarHidden:NO];
+    UIBarButtonItem *homeButton = [[UIBarButtonItem alloc] initWithTitle:@"HOME" style:UIBarButtonItemStylePlain target:self action:@selector(startOverAgain)];
+    self.navigationItem.rightBarButtonItem = homeButton;
+}
+
+- (void) startOverAgain{
+    NSString *urlString = [NSString stringWithFormat:@"https://instagram.com/oauth/authorize/?client_id=%@&redirect_uri=%@&response_type=token", [DataSource instagramClientID], [self redirectURI]];
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    if (url) {
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        [self.webView loadRequest:request];
+    }
+}
+
 - (BOOL) webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSString *urlString = request.URL.absoluteString;
     if ([urlString hasPrefix:[self redirectURI]]) {

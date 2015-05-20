@@ -16,4 +16,7 @@
 @property (nonatomic, strong) NSURL *profilePictureURL;
 @property (nonatomic, strong) UIImage *profilePicture;
 
+// we're using this to take a dictionary of JSON data from Instagram and make something with it
+- (instancetype) initWithDictionary:(NSDictionary *)userDictionary;
+
 @end

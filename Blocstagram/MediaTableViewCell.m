@@ -139,6 +139,8 @@ static NSParagraphStyle *paragraphStyle;
     self.commentLabel.attributedText = [self commentString];
 }
 
+
+
 - (NSAttributedString *) usernameAndCaptionString {
     CGFloat usernameFontSize = 15;
     
@@ -200,11 +202,13 @@ static NSParagraphStyle *paragraphStyle;
     return CGRectGetMaxY(layoutCell.commentLabel.frame);
 }
 
-// have not used this boilerplate code
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
+- (void) setHighlighted:(BOOL)highlighted animated: (BOOL) animated {
+    [super setHighlighted:NO animated:animated];
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:NO animated:animated];
 }
 
 @end

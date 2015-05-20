@@ -17,4 +17,6 @@
 @property (nonatomic, strong) NSString *text;
 @property BOOL topComment;
 
+- (instancetype) initWithDictionary: (NSDictionary *) commentDictionary;
+
 @end

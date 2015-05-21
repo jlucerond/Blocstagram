@@ -59,6 +59,12 @@
                     if (storedMediaItems.count > 0) {
                         NSMutableArray *mutableMediaItems = [storedMediaItems mutableCopy];
                         
+                        // my attempt at this assignment
+                        [[DataSource sharedInstance] requestNewItemsWithCompletionHandler:^(NSError *error) {
+                            NSLog(@"completed");
+                        }];
+                        // end of my code
+                        
                         [self willChangeValueForKey:@"mediaItems"];
                         self.mediaItems = mutableMediaItems;
                         [self didChangeValueForKey:@"mediaItems"];

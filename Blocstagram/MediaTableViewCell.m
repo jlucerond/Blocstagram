@@ -63,11 +63,7 @@ static NSParagraphStyle *paragraphStyle;
         self.commentLabel = [[UILabel alloc]init];
         self.commentLabel.numberOfLines = 0;
         self.commentLabel.backgroundColor = commentLabelGray;
-        
-#pragma mark - MARK - why doens't this work here?
-        self.commentLabel.textAlignment = NSTextAlignmentRight;
-        
-        
+    
         for (UIView *view in @[self.mediaImageView, self.usernameAndCaptionLabel, self.commentLabel]){
             [self.contentView addSubview:view];
             view.translatesAutoresizingMaskIntoConstraints = NO;

@@ -12,8 +12,9 @@
 #import "User.h"
 #import "Comment.h"
 #import "MediaTableViewCell.h"
+#import "MediaFullScreenViewController.h"
 
-@interface ImagesTableViewController ()
+@interface ImagesTableViewController () <MediaTableViewCellDelegate>
 
 //@property (nonatomic, strong)  NSMutableArray *items;
 
@@ -122,6 +123,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     // Configure the cell...
     MediaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mediaCell" forIndexPath:indexPath];
+    cell.delegate = self;
     cell.mediaItem = [DataSource sharedInstance].mediaItems[indexPath.row];
     
     return cell;
@@ -150,6 +152,30 @@
         return 350;
     } else {
         return 150;
+    }
+}
+
+#pragma mark - MediaTableViewCellDelegate
+
+- (void) cell:(MediaTableViewCell *)cell didTapImageView:(UIImageView *)imageView {
+    MediaFullScreenViewController *fullScreenVC = [[MediaFullScreenViewController alloc] initWithMedia:cell.mediaItem];
+    [self presentViewController:fullScreenVC animated:YES completion:nil];
+}
+
+- (void) cell:(MediaTableViewCell *)cell didLongPressImageView:(UIImageView *)imageView {
+    NSMutableArray *itemsToShare = [NSMutableArray array];
+
+    if (cell.mediaItem.image) {
+        [itemsToShare addObject:cell.mediaItem.image];
+    }
+    
+    if (cell.mediaItem.caption.length > 0) {
+        [itemsToShare addObject:cell.mediaItem.caption];
+    }
+    
+    if (itemsToShare.count > 0) {
+        UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
+        [self presentViewController:activityVC animated:YES completion:nil];
     }
 }
 

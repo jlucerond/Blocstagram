@@ -17,6 +17,7 @@
 @interface ImagesTableViewController () <MediaTableViewCellDelegate>
 
 //@property (nonatomic, strong)  NSMutableArray *items;
+@property (nonatomic, strong) MediaTableViewCell *currentCell;
 
 @end
 
@@ -41,6 +42,14 @@
     [self.refreshControl addTarget:self action:@selector(refreshControlDidFire:) forControlEvents:UIControlEventValueChanged];
 
     [self.tableView registerClass:[MediaTableViewCell class] forCellReuseIdentifier:@"mediaCell"];
+    
+    UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithTitle:@"Share" style:UIBarButtonItemStylePlain target:self action:@selector(wantsToShare)];
+    self.navigationItem.rightBarButtonItem = shareButton;
+}
+
+- (void) wantsToShare {
+    NSLog(@"worked");
+    [self cell:self.currentCell didLongPressImageView:self.currentCell.imageView];
 }
 
 - (void) dealloc {
@@ -125,6 +134,8 @@
     MediaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mediaCell" forIndexPath:indexPath];
     cell.delegate = self;
     cell.mediaItem = [DataSource sharedInstance].mediaItems[indexPath.row];
+    
+    self.currentCell = cell;
     
     return cell;
 }

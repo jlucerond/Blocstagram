@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9879F58BC534383DC5206373 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F31961A46AF7E02DD991F3 /* libPods.a */; };
+		9879F58BC534383DC5206373 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F31961A46AF7E02DD991F3 /* libPods.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		D81314741B0A2B45008BF291 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81314731B0A2B45008BF291 /* LoginViewController.m */; };
 		D83B835C1B160FFF006A40DF /* MediaFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83B835B1B160FFF006A40DF /* MediaFullScreenViewController.m */; };
 		D83F298B1B04DF6B001A6A84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F298A1B04DF6B001A6A84 /* main.m */; };
@@ -496,7 +496,7 @@
 		};
 		D83F29AA1B04DF6B001A6A84 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D78DC81DCDDD202D08743B4 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 10AA89C94A6FFB4AA0F7A54B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Blocstagram/Info.plist;

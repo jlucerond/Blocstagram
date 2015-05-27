@@ -10,6 +10,7 @@
 #import "Media.h"
 #import "Comment.h"
 #import "User.h"
+#import "ImagesTableViewController.h"
 
 @interface MediaTableViewCell () <UIGestureRecognizerDelegate>
 
@@ -23,6 +24,8 @@
 
 @property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer;
 @property (nonatomic, strong) UILongPressGestureRecognizer *longPressGestureRecognizer;
+
+@property (nonatomic, strong) UITapGestureRecognizer *doubleTapGestureRecognizer;
 
 @end
 
@@ -62,9 +65,19 @@ static NSParagraphStyle *paragraphStyle;
         
         //gesture recognizer code
         self.mediaImageView.userInteractionEnabled = YES;
+        
+        //single tap gesture recognizer code
         self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapFired:)];
         self.tapGestureRecognizer.delegate = self;
         [self.mediaImageView addGestureRecognizer:self.tapGestureRecognizer];
+        
+        //double tap gesture recognizer code
+        self.doubleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapFired:)];
+        self.doubleTapGestureRecognizer.delegate = self;
+        self.doubleTapGestureRecognizer.numberOfTapsRequired = 2;
+        [self.mediaImageView addGestureRecognizer:self.doubleTapGestureRecognizer];
+        
+        [self.tapGestureRecognizer requireGestureRecognizerToFail:self.doubleTapGestureRecognizer];
         
         //longpress gesture recognizer code
         self.longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressFired:)];
@@ -226,6 +239,13 @@ static NSParagraphStyle *paragraphStyle;
 
 - (void) tapFired:(UITapGestureRecognizer *) sender {
     [self.delegate cell:self didTapImageView:self.mediaImageView];
+}
+
+- (void) doubleTapFired:(UITapGestureRecognizer *) sender {
+    if (sender.state == UIGestureRecognizerStateEnded){
+        //THIS ISN'T WORKING- CAN WE FIGURE THIS OUT TOGETHER, MARK?
+        //[[ImagesTableViewController init] refreshControl];
+    }
 }
 
 - (void) longPressFired:(UITapGestureRecognizer *) sender {

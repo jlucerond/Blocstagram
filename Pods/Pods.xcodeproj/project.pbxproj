@@ -602,7 +602,6 @@
 		};
 		5D3D452B7AF39A1AE64F1B62 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6CF703B09465811BCAE12CE2 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;

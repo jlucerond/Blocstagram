@@ -122,6 +122,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     // Configure the cell...
+    if (UIScrollViewDecelerationRateNormal){
+        NSLog(@"this is working, but I'm not sure how to use it");
+    }
     MediaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mediaCell" forIndexPath:indexPath];
     cell.delegate = self;
     cell.mediaItem = [DataSource sharedInstance].mediaItems[indexPath.row];
@@ -158,6 +161,7 @@
     if (item.image) {
         return 350;
     } else {
+        // is this where the assignment is referring to? mine was already set at non-zero
         return 150;
     }
 }

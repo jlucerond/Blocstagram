@@ -15,6 +15,7 @@
 @interface LikeButton ()
 
 @property (nonatomic, strong) CircleSpinnerView *spinnerView;
+@property (nonatomic, strong) NSString *numberOfLikes;
 
 @end
 
@@ -37,10 +38,17 @@
         
         self.imageView.contentMode = UIViewContentModeScaleAspectFit;
         
-        self.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
-        self.contentVerticalAlignment = UIControlContentVerticalAlignmentTop;
+//        self.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
+//        self.contentVerticalAlignment = UIControlContentVerticalAlignmentTop;
+//        self.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
         
         self.likeButtonState = LikeStateNotLiked;
+        
+        CGFloat spacing = 10; // the amount of spacing to appear between image and title
+        self.imageEdgeInsets = UIEdgeInsetsMake(10, 10, 10, spacing);
+        self.titleEdgeInsets = UIEdgeInsetsMake(0, spacing, 0, 0);
+        self.titleLabel.textAlignment = NSTextAlignmentLeft;
+        self.titleLabel.text = @"2";
     }
     
     return self;

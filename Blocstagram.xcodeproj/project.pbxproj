@@ -33,6 +33,7 @@
 		D83F29CE1B051146001A6A84 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F29CD1B051146001A6A84 /* Comment.m */; };
 		D83F29D11B051388001A6A84 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F29D01B051388001A6A84 /* DataSource.m */; };
 		D83F29D41B05338A001A6A84 /* MediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F29D31B05338A001A6A84 /* MediaTableViewCell.m */; };
+		D8C657A51B1CBD1600E4D5DC /* ComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C657A41B1CBD1600E4D5DC /* ComposeCommentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,8 @@
 		D83F29D01B051388001A6A84 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 		D83F29D21B053389001A6A84 /* MediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTableViewCell.h; sourceTree = "<group>"; };
 		D83F29D31B05338A001A6A84 /* MediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTableViewCell.m; sourceTree = "<group>"; };
+		D8C657A31B1CBD1600E4D5DC /* ComposeCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeCommentView.h; sourceTree = "<group>"; };
+		D8C657A41B1CBD1600E4D5DC /* ComposeCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeCommentView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +163,8 @@
 				D83F29D31B05338A001A6A84 /* MediaTableViewCell.m */,
 				D83B835A1B160FFF006A40DF /* MediaFullScreenViewController.h */,
 				D83B835B1B160FFF006A40DF /* MediaFullScreenViewController.m */,
+				D8C657A31B1CBD1600E4D5DC /* ComposeCommentView.h */,
+				D8C657A41B1CBD1600E4D5DC /* ComposeCommentView.m */,
 				D83F29C61B050F65001A6A84 /* User.h */,
 				D83F29C71B050F65001A6A84 /* User.m */,
 				D83F29C91B05101B001A6A84 /* Media.h */,
@@ -378,6 +383,7 @@
 				D81314741B0A2B45008BF291 /* LoginViewController.m in Sources */,
 				D839DBA21B18CD5E003F759A /* LikeButton.m in Sources */,
 				D83F298E1B04DF6B001A6A84 /* AppDelegate.m in Sources */,
+				D8C657A51B1CBD1600E4D5DC /* ComposeCommentView.m in Sources */,
 				D83F298B1B04DF6B001A6A84 /* main.m in Sources */,
 				D83F29B01B04DF9B001A6A84 /* ImagesTableViewController.m in Sources */,
 			);

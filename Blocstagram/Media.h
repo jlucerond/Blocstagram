@@ -9,6 +9,7 @@
 #pragma mark - question for mark- why do we replace the foundation instead of also adding UIKit? Is UIKit a subclass of Foundation?
 
 #import <UIKit/UIKit.h>
+#import "LikeButton.h"
 
 typedef NS_ENUM(NSInteger, MediaDownloadState) {
     MediaDownloadStateNeedsImage = 0,
@@ -28,6 +29,8 @@ typedef NS_ENUM(NSInteger, MediaDownloadState) {
 @property (nonatomic, assign) MediaDownloadState downloadState;
 @property (nonatomic, strong) NSString *caption;
 @property (nonatomic, strong) NSArray *comments;
+
+@property (nonatomic, assign) LikeState likeState;
 
 - (instancetype) initWithDictionary: (NSDictionary *) mediaDictionary;
 

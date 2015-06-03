@@ -265,7 +265,7 @@ static NSParagraphStyle *paragraphStyle;
 
 #pragma mark - ComposeCommentViewDelegate
 
-- (void) commentViewDidPressCommentButton:(ComposeCommentView *)sender {
+- (void) commentViewDidPressCommentbutton:(ComposeCommentView *)sender {
     [self.delegate cell:self didComposeComment:self.mediaItem.temporaryComment];
 }
 

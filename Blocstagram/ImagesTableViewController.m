@@ -17,7 +17,7 @@
 #import "ImageLibraryViewController.h"
 #import "PostToInstagramViewController.h"
 
-@interface ImagesTableViewController () <MediaTableViewCellDelegate, UIViewControllerTransitioningDelegate, CameraViewControllerDelegate, ImageLibraryViewControllerDelegate>
+@interface ImagesTableViewController () <MediaTableViewCellDelegate, CameraViewControllerDelegate, ImageLibraryViewControllerDelegate>
 
 @property (nonatomic, weak) UIView *lastSelectedCommentView;
 @property (nonatomic, assign) CGFloat lastKeyboardAdjustment;
@@ -162,10 +162,6 @@
 
     if (imageVC) {
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:imageVC];
-        
-        nav.modalPresentationStyle = UIModalPresentationPopover;
-        UIPopoverPresentationController *popOverController = nav.popoverPresentationController;
-        popOverController.barButtonItem = sender;
         [self presentViewController:nav animated:YES completion:nil];
     }
 
@@ -192,7 +188,7 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     return [DataSource sharedInstance].mediaItems.count;
 }
@@ -220,7 +216,7 @@
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     Media *item = [DataSource sharedInstance].mediaItems[indexPath.row];
-    return [MediaTableViewCell heightForMediaItem:item width:CGRectGetWidth(self.view.frame) traitCollection:self.view.traitCollection];
+    return [MediaTableViewCell heightForMediaItem:item width:CGRectGetWidth(self.view.frame)];
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -248,16 +244,6 @@
 
 - (void) cell:(MediaTableViewCell *)cell didTapImageView:(UIImageView *)imageView {
     MediaFullScreenViewController *fullScreenVC = [[MediaFullScreenViewController alloc] initWithMedia:cell.mediaItem];
-    
-    if (self.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassRegular) {
-        fullScreenVC.modalPresentationStyle = UIModalPresentationFormSheet;
-    }
-    
-    else {
-        fullScreenVC.transitioningDelegate = self;
-        fullScreenVC.modalPresentationStyle = UIModalPresentationCustom;
-    }
-    
     [self presentViewController:fullScreenVC animated:YES completion:nil];
 }
 

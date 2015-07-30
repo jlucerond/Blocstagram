@@ -72,22 +72,9 @@
     [self.view addSubview:self.previewImageView];
     [self.view addSubview:self.filterCollectionView];
     
-    if ([UIDevice currentDevice].userInterfaceIdiom != UIUserInterfaceIdiomPad) {
-        //it's an iphone
-        
-        //make sure it's not a 4s
-        if ([ [ UIScreen mainScreen ] bounds ].size.height < 600) {
-            self.navigationItem.rightBarButtonItem = self.sendBarButton;
-        }
-        
-        //otherwise, do a button
-        else {
-            [self.view addSubview:self.sendButton];
-        }
-    }
-
-    
-    else {
+    if (CGRectGetHeight(self.view.frame) > 500) {
+        [self.view addSubview:self.sendButton];
+    } else {
         self.navigationItem.rightBarButtonItem = self.sendBarButton;
     }
 
@@ -103,10 +90,6 @@
     [super viewWillLayoutSubviews];
 
     CGFloat edgeSize = MIN(CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
-    
-    if (CGRectGetHeight(self.view.bounds) < edgeSize * 1.5) {
-        edgeSize /= 1.5;
-    }
 
     self.previewImageView.frame = CGRectMake(0, self.topLayoutGuide.length, edgeSize, edgeSize);
 

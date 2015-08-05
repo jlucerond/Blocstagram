@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0640"
+   version = "2.0">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D85F50811B6BD7BD00D42E5D"
+               BuildableName = "Blocstagram WatchKit App.app"
+               BlueprintName = "Blocstagram WatchKit App"
+               ReferencedContainer = "container:Blocstagram.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D85F506F1B6BD7BD00D42E5D"
+               BuildableName = "Blocstagram WatchKit Extension.appex"
+               BlueprintName = "Blocstagram WatchKit Extension"
+               ReferencedContainer = "container:Blocstagram.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D83F29841B04DF6B001A6A84"
+               BuildableName = "Blocstagram.app"
+               BlueprintName = "Blocstagram"
+               ReferencedContainer = "container:Blocstagram.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      buildConfiguration = "Debug">
+      <Testables>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D85F50811B6BD7BD00D42E5D"
+            BuildableName = "Blocstagram WatchKit App.app"
+            BlueprintName = "Blocstagram WatchKit App"
+            ReferencedContainer = "container:Blocstagram.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </TestAction>
+   <LaunchAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      allowLocationSimulation = "YES"
+      launchAutomaticallySubstyle = "8"
+      notificationPayloadFile = "Blocstagram WatchKit Extension/PushNotificationPayload.apns">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/Blocstagram">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D85F50811B6BD7BD00D42E5D"
+            BuildableName = "Blocstagram WatchKit App.app"
+            BlueprintName = "Blocstagram WatchKit App"
+            ReferencedContainer = "container:Blocstagram.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D85F50811B6BD7BD00D42E5D"
+            BuildableName = "Blocstagram WatchKit App.app"
+            BlueprintName = "Blocstagram WatchKit App"
+            ReferencedContainer = "container:Blocstagram.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Release"
+      debugDocumentVersioning = "YES"
+      launchAutomaticallySubstyle = "8"
+      notificationPayloadFile = "Blocstagram WatchKit Extension/PushNotificationPayload.apns">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/Blocstagram">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D85F50811B6BD7BD00D42E5D"
+            BuildableName = "Blocstagram WatchKit App.app"
+            BlueprintName = "Blocstagram WatchKit App"
+            ReferencedContainer = "container:Blocstagram.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D85F50811B6BD7BD00D42E5D"
+            BuildableName = "Blocstagram WatchKit App.app"
+            BlueprintName = "Blocstagram WatchKit App"
+            ReferencedContainer = "container:Blocstagram.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

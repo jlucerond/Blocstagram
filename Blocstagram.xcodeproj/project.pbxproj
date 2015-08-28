@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9879F58BC534383DC5206373 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F31961A46AF7E02DD991F3 /* libPods.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		D81314741B0A2B45008BF291 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81314731B0A2B45008BF291 /* LoginViewController.m */; };
+		D832F88F1B90DC47009F5A6D /* Blocstagram.app in Resources */ = {isa = PBXBuildFile; fileRef = D83F29851B04DF6B001A6A84 /* Blocstagram.app */; };
 		D839DB9F1B18C99E003F759A /* CircleSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D839DB9E1B18C99E003F759A /* CircleSpinnerView.m */; };
 		D839DBA21B18CD5E003F759A /* LikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D839DBA11B18CD5E003F759A /* LikeButton.m */; };
 		D83B835C1B160FFF006A40DF /* MediaFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83B835B1B160FFF006A40DF /* MediaFullScreenViewController.m */; };
@@ -18,16 +19,6 @@
 		D83F29991B04DF6B001A6A84 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D83F29971B04DF6B001A6A84 /* LaunchScreen.xib */; };
 		D83F29A51B04DF6B001A6A84 /* BlocstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F29A41B04DF6B001A6A84 /* BlocstagramTests.m */; };
 		D83F29B01B04DF9B001A6A84 /* ImagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F29AF1B04DF9B001A6A84 /* ImagesTableViewController.m */; };
-		D83F29BC1B05067D001A6A84 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D83F29B21B05067D001A6A84 /* 1.jpg */; };
-		D83F29BD1B05067D001A6A84 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D83F29B31B05067D001A6A84 /* 2.jpg */; };
-		D83F29BE1B05067D001A6A84 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D83F29B41B05067D001A6A84 /* 3.jpg */; };
-		D83F29BF1B05067D001A6A84 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D83F29B51B05067D001A6A84 /* 4.jpg */; };
-		D83F29C01B05067D001A6A84 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D83F29B61B05067D001A6A84 /* 5.jpg */; };
-		D83F29C11B05067D001A6A84 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D83F29B71B05067D001A6A84 /* 6.jpg */; };
-		D83F29C21B05067D001A6A84 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D83F29B81B05067D001A6A84 /* 7.jpg */; };
-		D83F29C31B05067D001A6A84 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D83F29B91B05067D001A6A84 /* 8.jpg */; };
-		D83F29C41B05067D001A6A84 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D83F29BA1B05067D001A6A84 /* 9.jpg */; };
-		D83F29C51B05067D001A6A84 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D83F29BB1B05067D001A6A84 /* 10.jpg */; };
 		D83F29C81B050F65001A6A84 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F29C71B050F65001A6A84 /* User.m */; };
 		D83F29CB1B05101B001A6A84 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F29CA1B05101B001A6A84 /* Media.m */; };
 		D83F29CE1B051146001A6A84 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = D83F29CD1B051146001A6A84 /* Comment.m */; };
@@ -52,6 +43,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D832F88D1B90DC3A009F5A6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D83F297D1B04DF6B001A6A84 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D83F29841B04DF6B001A6A84;
+			remoteInfo = Blocstagram;
+		};
 		D83F299F1B04DF6B001A6A84 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D83F297D1B04DF6B001A6A84 /* Project object */;
@@ -113,16 +111,6 @@
 		D83F29A41B04DF6B001A6A84 /* BlocstagramTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlocstagramTests.m; sourceTree = "<group>"; };
 		D83F29AE1B04DF9B001A6A84 /* ImagesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesTableViewController.h; sourceTree = "<group>"; };
 		D83F29AF1B04DF9B001A6A84 /* ImagesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesTableViewController.m; sourceTree = "<group>"; };
-		D83F29B21B05067D001A6A84 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
-		D83F29B31B05067D001A6A84 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
-		D83F29B41B05067D001A6A84 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
-		D83F29B51B05067D001A6A84 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
-		D83F29B61B05067D001A6A84 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
-		D83F29B71B05067D001A6A84 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
-		D83F29B81B05067D001A6A84 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
-		D83F29B91B05067D001A6A84 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
-		D83F29BA1B05067D001A6A84 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
-		D83F29BB1B05067D001A6A84 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
 		D83F29C61B050F65001A6A84 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		D83F29C71B050F65001A6A84 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		D83F29C91B05101B001A6A84 /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
@@ -237,38 +225,11 @@
 			children = (
 				D83F298C1B04DF6B001A6A84 /* AppDelegate.h */,
 				D83F298D1B04DF6B001A6A84 /* AppDelegate.m */,
-				D81314721B0A2B45008BF291 /* LoginViewController.h */,
-				D81314731B0A2B45008BF291 /* LoginViewController.m */,
-				D83F29AE1B04DF9B001A6A84 /* ImagesTableViewController.h */,
-				D83F29AF1B04DF9B001A6A84 /* ImagesTableViewController.m */,
-				D83F29D21B053389001A6A84 /* MediaTableViewCell.h */,
-				D83F29D31B05338A001A6A84 /* MediaTableViewCell.m */,
-				D83B835A1B160FFF006A40DF /* MediaFullScreenViewController.h */,
-				D83B835B1B160FFF006A40DF /* MediaFullScreenViewController.m */,
-				D8C657B21B1F8F2700E4D5DC /* CropImageViewController.h */,
-				D8C657B31B1F8F2700E4D5DC /* CropImageViewController.m */,
-				D8C657A31B1CBD1600E4D5DC /* ComposeCommentView.h */,
-				D8C657A41B1CBD1600E4D5DC /* ComposeCommentView.m */,
-				D8C657A91B1E2E0D00E4D5DC /* CameraViewController.h */,
-				D8C657AA1B1E2E0D00E4D5DC /* CameraViewController.m */,
-				D8C657A61B1E29A400E4D5DC /* CameraToolbar.h */,
-				D8C657A71B1E29A400E4D5DC /* CameraToolbar.m */,
-				D8C657B51B1F96D800E4D5DC /* ImageLibraryViewController.h */,
-				D8C657B61B1F96D800E4D5DC /* ImageLibraryViewController.m */,
-				D8C657AC1B1F538400E4D5DC /* UIImage+ImageUtilities.h */,
-				D8C657AD1B1F538400E4D5DC /* UIImage+ImageUtilities.m */,
-				D8C657BB1B20A1C900E4D5DC /* PostToInstagramViewController.h */,
-				D8C657BC1B20A1C900E4D5DC /* PostToInstagramViewController.m */,
+				D86C22CC1B7A41D200CAE900 /* View Controllers */,
 				D85F50981B6C05C100D42E5D /* Model Objects */,
-				D839DB9D1B18C99E003F759A /* CircleSpinnerView.h */,
-				D839DB9E1B18C99E003F759A /* CircleSpinnerView.m */,
-				D839DBA01B18CD5E003F759A /* LikeButton.h */,
-				D839DBA11B18CD5E003F759A /* LikeButton.m */,
-				D8C657AF1B1F883B00E4D5DC /* CropBox.h */,
-				D8C657B01B1F883B00E4D5DC /* CropBox.m */,
+				D86C22CB1B7A41C900CAE900 /* View */,
 				D83F29951B04DF6B001A6A84 /* Images.xcassets */,
 				D83F29971B04DF6B001A6A84 /* LaunchScreen.xib */,
-				D83F29B11B05066F001A6A84 /* images */,
 				D83F29881B04DF6B001A6A84 /* Supporting Files */,
 			);
 			path = Blocstagram;
@@ -298,24 +259,6 @@
 				D83F29A31B04DF6B001A6A84 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D83F29B11B05066F001A6A84 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				D83F29B21B05067D001A6A84 /* 1.jpg */,
-				D83F29B31B05067D001A6A84 /* 2.jpg */,
-				D83F29B41B05067D001A6A84 /* 3.jpg */,
-				D83F29B51B05067D001A6A84 /* 4.jpg */,
-				D83F29B61B05067D001A6A84 /* 5.jpg */,
-				D83F29B71B05067D001A6A84 /* 6.jpg */,
-				D83F29B81B05067D001A6A84 /* 7.jpg */,
-				D83F29B91B05067D001A6A84 /* 8.jpg */,
-				D83F29BA1B05067D001A6A84 /* 9.jpg */,
-				D83F29BB1B05067D001A6A84 /* 10.jpg */,
-			);
-			name = images;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		D85F50711B6BD7BD00D42E5D /* Blocstagram WatchKit Extension */ = {
@@ -375,6 +318,48 @@
 			name = "Model Objects";
 			sourceTree = "<group>";
 		};
+		D86C22CB1B7A41C900CAE900 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8C657A61B1E29A400E4D5DC /* CameraToolbar.h */,
+				D8C657A71B1E29A400E4D5DC /* CameraToolbar.m */,
+				D839DB9D1B18C99E003F759A /* CircleSpinnerView.h */,
+				D839DB9E1B18C99E003F759A /* CircleSpinnerView.m */,
+				D839DBA01B18CD5E003F759A /* LikeButton.h */,
+				D839DBA11B18CD5E003F759A /* LikeButton.m */,
+				D8C657AF1B1F883B00E4D5DC /* CropBox.h */,
+				D8C657B01B1F883B00E4D5DC /* CropBox.m */,
+				D8C657A31B1CBD1600E4D5DC /* ComposeCommentView.h */,
+				D8C657A41B1CBD1600E4D5DC /* ComposeCommentView.m */,
+				D83F29D21B053389001A6A84 /* MediaTableViewCell.h */,
+				D83F29D31B05338A001A6A84 /* MediaTableViewCell.m */,
+				D8C657AC1B1F538400E4D5DC /* UIImage+ImageUtilities.h */,
+				D8C657AD1B1F538400E4D5DC /* UIImage+ImageUtilities.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D86C22CC1B7A41D200CAE900 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D81314721B0A2B45008BF291 /* LoginViewController.h */,
+				D81314731B0A2B45008BF291 /* LoginViewController.m */,
+				D83F29AE1B04DF9B001A6A84 /* ImagesTableViewController.h */,
+				D83F29AF1B04DF9B001A6A84 /* ImagesTableViewController.m */,
+				D83B835A1B160FFF006A40DF /* MediaFullScreenViewController.h */,
+				D83B835B1B160FFF006A40DF /* MediaFullScreenViewController.m */,
+				D8C657B21B1F8F2700E4D5DC /* CropImageViewController.h */,
+				D8C657B31B1F8F2700E4D5DC /* CropImageViewController.m */,
+				D8C657A91B1E2E0D00E4D5DC /* CameraViewController.h */,
+				D8C657AA1B1E2E0D00E4D5DC /* CameraViewController.m */,
+				D8C657B51B1F96D800E4D5DC /* ImageLibraryViewController.h */,
+				D8C657B61B1F96D800E4D5DC /* ImageLibraryViewController.m */,
+				D8C657BB1B20A1C900E4D5DC /* PostToInstagramViewController.h */,
+				D8C657BC1B20A1C900E4D5DC /* PostToInstagramViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -429,6 +414,7 @@
 			);
 			dependencies = (
 				D85F50851B6BD7BD00D42E5D /* PBXTargetDependency */,
+				D832F88E1B90DC3A009F5A6D /* PBXTargetDependency */,
 			);
 			name = "Blocstagram WatchKit Extension";
 			productName = "Blocstagram WatchKit Extension";
@@ -500,17 +486,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D83F29C41B05067D001A6A84 /* 9.jpg in Resources */,
-				D83F29C31B05067D001A6A84 /* 8.jpg in Resources */,
-				D83F29BF1B05067D001A6A84 /* 4.jpg in Resources */,
-				D83F29BE1B05067D001A6A84 /* 3.jpg in Resources */,
-				D83F29C11B05067D001A6A84 /* 6.jpg in Resources */,
-				D83F29BC1B05067D001A6A84 /* 1.jpg in Resources */,
 				D83F29991B04DF6B001A6A84 /* LaunchScreen.xib in Resources */,
-				D83F29C01B05067D001A6A84 /* 5.jpg in Resources */,
-				D83F29C21B05067D001A6A84 /* 7.jpg in Resources */,
-				D83F29BD1B05067D001A6A84 /* 2.jpg in Resources */,
-				D83F29C51B05067D001A6A84 /* 10.jpg in Resources */,
 				D83F29961B04DF6B001A6A84 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,6 +503,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D85F50831B6BD7BD00D42E5D /* Blocstagram WatchKit App.app in Resources */,
+				D832F88F1B90DC47009F5A6D /* Blocstagram.app in Resources */,
 				D85F507F1B6BD7BD00D42E5D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -624,6 +601,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D832F88E1B90DC3A009F5A6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D83F29841B04DF6B001A6A84 /* Blocstagram */;
+			targetProxy = D832F88D1B90DC3A009F5A6D /* PBXContainerItemProxy */;
+		};
 		D83F29A01B04DF6B001A6A84 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D83F29841B04DF6B001A6A84 /* Blocstagram */;

@@ -11,4 +11,8 @@
 
 @interface InterfaceController : WKInterfaceController
 
+@property (weak, nonatomic) IBOutlet WKInterfaceSwitch *mySwitch;
+@property (weak, nonatomic) IBOutlet WKInterfaceImage *myPicture;
+
+
 @end

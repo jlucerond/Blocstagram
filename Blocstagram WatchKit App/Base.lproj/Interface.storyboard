@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
@@ -10,10 +10,18 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <switch width="1" alignment="left" value="YES" title="Switch" id="cJR-a9-8I9"/>
+                        <switch width="1" alignment="left" value="YES" title="Switch" id="cJR-a9-8I9">
+                            <connections>
+                                <action selector="mySwitchDidActivate:" destination="AgC-eL-Hgc" id="qEP-cw-qQ0"/>
+                            </connections>
+                        </switch>
                         <imageView width="136" height="111" alignment="center" verticalAlignment="center" image="icon" id="Ghd-bb-ArL"/>
                     </items>
                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="myPicture" destination="Ghd-bb-ArL" id="CPE-9E-jjZ"/>
+                        <outlet property="mySwitch" destination="cJR-a9-8I9" id="1ts-je-eSF"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="235" y="348"/>

@@ -28,7 +28,6 @@
 
 @end
 
-#pragma mark - let's chat about Singelton Pattern/shared instance. Or at least I need to come back to this.
 @implementation DataSource
 
 + (instancetype) sharedInstance {
@@ -164,33 +163,6 @@
     }
 }
 
-/* AM I ALLOWED TO TAKE ALL OF THIS CODE OUT?
-#pragma mark - Key/Value Observing
-
-- (NSUInteger) countOfMediaItems {
-    return self.mediaItems.count;
-}
-
-- (id) objectInMediaItemsAtIndex:(NSUInteger)index {
-    return [self.mediaItems objectAtIndex:index];
-}
-
-- (NSArray *) mediaItemsAtIndexes:(NSIndexSet *)indexes {
-    return [self.mediaItems objectsAtIndexes:indexes];
-}
-
-- (void) insertObject:(Media *)object inMediaItemsAtIndex:(NSUInteger)index {
-    [_mediaItems insertObject:object atIndex:index];
-}
-
-- (void) removeObjectFromMediaItemsAtIndex:(NSUInteger)index {
-    [_mediaItems removeObjectAtIndex:index];
-}
-
-- (void) replaceObjectInMediaItemsAtIndex:(NSUInteger)index withObject:(id)object {
-    [_mediaItems replaceObjectAtIndex:index withObject:object];
-}
-*/
 #pragma mark - get a feed of the user's images
 
 - (void) populateDataWithParameters:(NSDictionary *)parameters completionHandler:(NewItemCompletionBlock)completionHandler {
